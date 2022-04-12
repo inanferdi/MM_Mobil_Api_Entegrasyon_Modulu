@@ -48,6 +48,7 @@
     <Compile Include="Api\Token.cs" />
     <Compile Include="Brand.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="Category_Attibute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

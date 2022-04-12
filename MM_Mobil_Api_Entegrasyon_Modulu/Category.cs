@@ -48,5 +48,7 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu
 
             return client.GetMethodList("/category/getCategoryTree");
         }
+
+       
     }
 }
