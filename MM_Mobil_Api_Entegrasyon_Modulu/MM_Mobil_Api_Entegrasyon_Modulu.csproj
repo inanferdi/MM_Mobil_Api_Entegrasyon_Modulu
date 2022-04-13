@@ -50,6 +50,10 @@
     <Compile Include="Category.cs" />
     <Compile Include="Category_Attibute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teslimat\CargoCompany.cs" />
+    <Compile Include="Teslimat\StoreAddress.cs" />
+    <Compile Include="Teslimat\StoreDelivery.cs" />
+    <Compile Include="Teslimat\TeslimatTip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
