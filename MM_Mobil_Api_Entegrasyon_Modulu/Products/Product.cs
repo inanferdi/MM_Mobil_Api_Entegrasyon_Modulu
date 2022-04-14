@@ -77,6 +77,18 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Products
 
             var result = client.PostMethod(this, url);
 
+            UrunKayitKontrol(result.batchRequestId);
+        }
+
+        private void UrunKayitKontrol(string BatchRequestId)
+        {
+
+            var client = new Api.Client<ProductResponse>();
+
+            string url = "/product/getProductBatchResult?BatchRequestId=" + BatchRequestId;
+
+            var result = client.GetMethod(url);
+
             if (result.failedCount > 0) throw new ArgumentException("Ürün Kaydı Yapılamadı.");
         }
 
