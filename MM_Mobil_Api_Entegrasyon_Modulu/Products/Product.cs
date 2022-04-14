@@ -139,6 +139,29 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Products
             if (!result.success) throw new ArgumentException("Stok Güncelleme Yapılamadı.");
         }
 
+        /// <summary>
+        /// Code parametresi hiç gönderilmez ise, tüm onaylanmış ve onaylanmamış ürünler listelenir.
+        /// 
+        /// </summary>
+        /// <param name="Approved"></param>
+        /// <param name="Code"></param>
+        /// <param name="Page"></param>
+        /// <param name="Size"></param>
+        /// <returns></returns>
+        public List<Product> ProductFilterList(bool Approved,int Code=0, int Page=1,int Size = 100)
+        {
+            string url = $"http://%7Bbaseurl%7D/product/products?Approved={Approved}&Code={Code}&Size={Size}&Page={Page}";
+
+            if (Code == 0) url = $"http://%7Bbaseurl%7D/product/products?Approved={Approved}&Size={Size}&Page={Page}";
+
+            var client = new Api.Client<Product>();
+
+            var result = client.GetMethodList(url);
+
+            return result;
+
+        }
+
         public string name { get { return this.Name; } set { this.Name = value; } }
         public string displayName { get { return this.DisplayName; } set { this.DisplayName = value; } }
         public string description { get { return this.Description; } set { this.Description = value; } }
