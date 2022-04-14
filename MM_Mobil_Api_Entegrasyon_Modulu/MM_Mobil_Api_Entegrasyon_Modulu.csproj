@@ -54,6 +54,7 @@
     <Compile Include="Products\Deliveries.cs" />
     <Compile Include="Products\Images.cs" />
     <Compile Include="Products\Product.cs" />
+    <Compile Include="Products\ProductItemsStock.cs" />
     <Compile Include="Products\ProductResponse.cs" />
     <Compile Include="Products\ProductItemsPrice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

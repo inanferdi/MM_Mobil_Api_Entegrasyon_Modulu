@@ -127,6 +127,18 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Products
             if (!result.success) throw new ArgumentException("Fiyat Güncelleme Yapılamadı.");
         }
 
+        public void ProductUpdateStock(List<ProductItemsStock> items)
+        {
+
+            var client = new Api.Client<HelperResponse>();
+
+            string url = "/product/updateStock";
+
+            var result = client.PostMethod(items, url);
+
+            if (!result.success) throw new ArgumentException("Stok Güncelleme Yapılamadı.");
+        }
+
         public string name { get { return this.Name; } set { this.Name = value; } }
         public string displayName { get { return this.DisplayName; } set { this.DisplayName = value; } }
         public string description { get { return this.Description; } set { this.Description = value; } }
