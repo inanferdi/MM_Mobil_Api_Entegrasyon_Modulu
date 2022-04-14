@@ -13,7 +13,7 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Products
         private string Description;
         private string BrandId;
         private int Desi;
-        private string Code;
+        private int Code;
         private string GroupCode;
         private int StockCount;
         private string StockCode;
@@ -48,7 +48,7 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Products
         public Product
             (
                 string Name,string DisplayName,string Description,string BrandId,
-                int Desi,string Code,string GroupCode,int StockCount,string StockCode,
+                int Desi,int Code,string GroupCode,int StockCount,string StockCode,
                 int VatRate,decimal ListPrice,decimal SalePrice,string CategoryId,
                 List<AttributeValues> Attributes, Deliveries Deliveries,List<Images> Images
             )
@@ -58,7 +58,6 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Products
             Karekter_Kontrol(100, Name);
             Karekter_Kontrol(250, DisplayName);
             Karekter_Kontrol(500, Description);
-            Karekter_Kontrol(500, Code);
             Karekter_Kontrol(10, GroupCode);
             Karekter_Kontrol(100, StockCode);
            
@@ -167,7 +166,7 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Products
         public string description { get { return this.Description; } set { this.Description = value; } }
         public string brandId { get { return this.BrandId; } set { this.BrandId = value; } }
         public int desi { get { return this.Desi; } set { this.Desi = value; } }
-        public string code { get { return this.Code; } set { this.Code = value; } }
+        public int code { get { return this.Code; } set { this.Code = value; } }
         public string groupCode { get { return this.GroupCode; } set { this.GroupCode = value; } }
         public int stockCount { get { return this.StockCount; } set { this.StockCount = value; } }
         public string stockCode { get { return this.StockCode; } set { this.StockCode = value; } }
