@@ -68,7 +68,7 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Products
             if (alan_adi.Length > uzunluk) throw new ArgumentException("' " + alan_adi + " '" + " en fazla 100 karekter olabilir.");
         }
 
-        public ProductResponse ProductCreate()
+        public void ProductCreate()
         {
 
             string url = "/product/create";
@@ -77,7 +77,7 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Products
 
             var result = client.PostMethod(this, url);
 
-            return result;
+            if (result.failedCount > 0) throw new ArgumentException("Ürün Kaydı Yapılamadı.");
         }
 
         public string name { get { return this.Name; } set { this.Name = value; } }
