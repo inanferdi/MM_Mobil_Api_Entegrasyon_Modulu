@@ -51,6 +51,14 @@
     <Compile Include="Category_Attibute.cs" />
     <Compile Include="Cities.cs" />
     <Compile Include="HelperResponse.cs" />
+    <Compile Include="Orders\BillingAddress.cs" />
+    <Compile Include="Orders\Order.cs" />
+    <Compile Include="Orders\OrderCargo.cs" />
+    <Compile Include="Orders\OrderItems.cs" />
+    <Compile Include="Orders\OrderList.cs" />
+    <Compile Include="Orders\OrderProduct.cs" />
+    <Compile Include="Orders\Order_ListPrice.cs" />
+    <Compile Include="Orders\ShipmentAddress.cs" />
     <Compile Include="Products\Deliveries.cs" />
     <Compile Include="Products\Images.cs" />
     <Compile Include="Products\Product.cs" />

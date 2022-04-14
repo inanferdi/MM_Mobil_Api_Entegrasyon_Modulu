@@ -43,7 +43,23 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Api
 
         }
 
-      
+        public List<T> PostMethodList(object data, string url)
+        {
+            var jsData = JsonConvert.SerializeObject(data, Formatting.Indented);
+            var contentData = new StringContent(jsData, Encoding.UTF8, "application/json");
+            var requestMessage = new HttpRequestMessage(HttpMethod.Post, url);
+            requestMessage.Content = contentData;
+            var task = this._client.SendAsync(requestMessage);
+            var response = task.Result;
+            response.EnsureSuccessStatusCode();
+
+            string responseBody = response.Content.ReadAsStringAsync().Result;
+
+            return JsonConvert.DeserializeObject<List<T>>(responseBody);
+
+        }
+
+
 
         public T GetMethod(string url)
         {
