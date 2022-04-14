@@ -50,10 +50,12 @@
     <Compile Include="Category.cs" />
     <Compile Include="Category_Attibute.cs" />
     <Compile Include="Cities.cs" />
+    <Compile Include="HelperResponse.cs" />
     <Compile Include="Products\Deliveries.cs" />
     <Compile Include="Products\Images.cs" />
     <Compile Include="Products\Product.cs" />
     <Compile Include="Products\ProductResponse.cs" />
+    <Compile Include="Products\ProductItemsPrice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Teslimat\CargoCompany.cs" />
     <Compile Include="Teslimat\StoreAddress.cs" />

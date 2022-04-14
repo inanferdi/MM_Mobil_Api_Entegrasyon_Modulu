@@ -25,6 +25,26 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Products
         private Deliveries Deliveries;
         private List<Images> Images;
 
+
+        /// <summary>
+        ///  Product Create
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <param name="DisplayName"></param>
+        /// <param name="Description"></param>
+        /// <param name="BrandId"></param>
+        /// <param name="Desi"></param>
+        /// <param name="Code"></param>
+        /// <param name="GroupCode"></param>
+        /// <param name="StockCount"></param>
+        /// <param name="StockCode"></param>
+        /// <param name="VatRate"></param>
+        /// <param name="ListPrice"></param>
+        /// <param name="SalePrice"></param>
+        /// <param name="CategoryId"></param>
+        /// <param name="Attributes"></param>
+        /// <param name="Deliveries"></param>
+        /// <param name="Images"></param>
         public Product
             (
                 string Name,string DisplayName,string Description,string BrandId,
@@ -63,6 +83,9 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Products
 
         }
 
+
+        
+
         public void Karekter_Kontrol(int uzunluk,string alan_adi)
         {
             if (alan_adi.Length > uzunluk) throw new ArgumentException("' " + alan_adi + " '" + " en fazla 100 karekter olabilir.");
@@ -90,6 +113,18 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Products
             var result = client.GetMethod(url);
 
             if (result.failedCount > 0) throw new ArgumentException("Ürün Kaydı Yapılamadı.");
+        }
+
+        public void ProductUpdatePrice(List<ProductItemsPrice> items)
+        {
+
+            var client = new Api.Client<HelperResponse>();
+
+            string url = "/product/updatePrice";
+
+            var result = client.PostMethod(items, url);
+
+            if (!result.success) throw new ArgumentException("Fiyat Güncelleme Yapılamadı.");
         }
 
         public string name { get { return this.Name; } set { this.Name = value; } }
