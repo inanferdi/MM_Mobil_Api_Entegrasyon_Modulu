@@ -58,9 +58,15 @@
     <Compile Include="Orders\OrderItemStatus.cs" />
     <Compile Include="Orders\OrderList.cs" />
     <Compile Include="Orders\OrderProduct.cs" />
+    <Compile Include="Orders\OrderRefund.cs" />
     <Compile Include="Orders\OrderStatus.cs" />
     <Compile Include="Orders\OrderStatusList.cs" />
     <Compile Include="Orders\Order_ListPrice.cs" />
+    <Compile Include="Orders\RefundAmount.cs" />
+    <Compile Include="Orders\RefundList.cs" />
+    <Compile Include="Orders\RefundPage.cs" />
+    <Compile Include="Orders\RefundReport.cs" />
+    <Compile Include="Orders\RefundResponse.cs" />
     <Compile Include="Orders\ShipmentAddress.cs" />
     <Compile Include="Products\Deliveries.cs" />
     <Compile Include="Products\Images.cs" />

@@ -46,10 +46,10 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Orders
             if (!result.success) throw new ArgumentException("Kargo durum bilgisi güncellenemedi. " + result.message);
         }
 
-        public string orderitemid { get; set; }
-        public int status { get; set; }
-        public int trackingnumber { get; set; }
-        public string trackingurl { get; set; }
-        public string cargoid { get; set; }
+        public string orderitemid { get { return this.OrderItemId; } set { this.OrderItemId = value; } }
+        public int status { get { return this.Status; } set { this.Status = value; } }
+        public int trackingnumber { get { return this.TrakingNumber; } set { this.TrakingNumber = value; } }
+        public string trackingurl { get { return this.TrakingUrl; } set { this.TrakingUrl = value; } }
+        public string cargoCompanyId { get { return this.CargoCompanyId; } set { this.CargoCompanyId = value; } }
     }
 }

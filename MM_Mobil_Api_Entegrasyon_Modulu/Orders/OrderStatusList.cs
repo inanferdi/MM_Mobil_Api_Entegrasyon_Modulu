@@ -29,5 +29,8 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Orders
 
             if (!result.success) throw new ArgumentException("Sipariş durum bilgisi güncellenemedi. " + result.message);
         }
+
+        public int orderNumber { get { return this.OrderNumber; } set { this.OrderNumber = value; } }
+        public int status { get { return this.Status; } set { this.Status = value; } }
     }
 }

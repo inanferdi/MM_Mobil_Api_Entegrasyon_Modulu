@@ -28,6 +28,9 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Orders
 
             if (!result.success) throw new ArgumentException("Ürün durum bilgisi güncellenemedi. " + result.message);
         }
+
+        public int orderNumber { get { return this.OrderNumber; } set { this.OrderNumber = value; } }
+        public ItemStatus item { get { return this.item; } set { this.item = value; } }
     }
 
     public class ItemStatus
@@ -42,7 +45,7 @@ namespace MM_Mobil_Api_Entegrasyon_Modulu.Orders
             this.Status = Status;
         }
 
-        public string orderItemId { get; set; }
-        public int status { get; set; }
+        public string orderItemId { get { return this.orderItemId; } set { this.orderItemId = value; } }
+        public int status { get { return this.Status; } set { this.Status = value; } }
     }
 }
