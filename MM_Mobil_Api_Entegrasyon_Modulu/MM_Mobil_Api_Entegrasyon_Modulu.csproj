@@ -55,6 +55,7 @@
     <Compile Include="Orders\Order.cs" />
     <Compile Include="Orders\OrderCargo.cs" />
     <Compile Include="Orders\OrderItems.cs" />
+    <Compile Include="Orders\OrderItemStatus.cs" />
     <Compile Include="Orders\OrderList.cs" />
     <Compile Include="Orders\OrderProduct.cs" />
     <Compile Include="Orders\OrderStatus.cs" />
