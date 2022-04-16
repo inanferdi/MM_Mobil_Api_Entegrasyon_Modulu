@@ -63,6 +63,7 @@
     <Compile Include="Orders\OrderStatus.cs" />
     <Compile Include="Orders\OrderStatusList.cs" />
     <Compile Include="Orders\Order_ListPrice.cs" />
+    <Compile Include="Orders\PaymentList.cs" />
     <Compile Include="Orders\RefundAmount.cs" />
     <Compile Include="Orders\RefundList.cs" />
     <Compile Include="Orders\RefundPage.cs" />
