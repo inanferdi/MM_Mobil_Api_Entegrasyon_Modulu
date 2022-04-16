@@ -52,6 +52,7 @@
     <Compile Include="Cities.cs" />
     <Compile Include="HelperResponse.cs" />
     <Compile Include="Orders\BillingAddress.cs" />
+    <Compile Include="Orders\InvoiceLink.cs" />
     <Compile Include="Orders\Order.cs" />
     <Compile Include="Orders\OrderCargo.cs" />
     <Compile Include="Orders\OrderItems.cs" />
