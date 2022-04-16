@@ -67,6 +67,8 @@
     <Compile Include="Orders\RefundPage.cs" />
     <Compile Include="Orders\RefundReport.cs" />
     <Compile Include="Orders\RefundResponse.cs" />
+    <Compile Include="Orders\RefundUpdate.cs" />
+    <Compile Include="Orders\RefundUpdateResponse.cs" />
     <Compile Include="Orders\ShipmentAddress.cs" />
     <Compile Include="Products\Deliveries.cs" />
     <Compile Include="Products\Images.cs" />
